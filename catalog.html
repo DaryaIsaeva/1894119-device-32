@@ -7,41 +7,46 @@
   </head>
   <body>
     <header class="page-header">
-        <a href="https://htmlacademy.ru/">
-          <img class="logo" src="images/logo-header.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
-        </a>
-        <nav class="navigation">
-          <form action="" method="">
-            <input type="search" name="search" placeholder="Поиск по сайту">
-          </form>
-          <a class="catalog" href="#">Каталог товаров</a>
-          <ul class="navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Коля Петухов</a>
-              <button class="log-off" type="button">Выйти</button>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Сравнить</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Корзина</a>
-            </li>
-          </ul>
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="">Доставка</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="">Гарантия</a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+      <a href="https://htmlacademy.ru/">
+        <img class="logo" src="images\logo-header.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
+      </a>
+      <nav class="navigation">
+        <ul class="navigation-user">
+          <li class="navigation-item search">
+            <form action="" method="">
+              <input type="search" name="search" placeholder="Поиск по сайту">
+            </form>
+          </li>
+          <li class="navigation-item log-in">
+            <a class="navigation-link" href="#">Коля Петухов</a>
+            <button class="log-off" type="button">Выйти</button>
+          </li>
+          <li class="navigation-item compare">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item cart">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+        <ul class="navigation-list">
+          <li class="navigation-item navigation-catalog">
+            <a class="catalog" href="#">Каталог товаров</a>
+          </li>
+          <li class="navigation-item navigation-delivery">
+            <a class="navigation-link" href="">Доставка</a>
+          </li>
+          <li class="navigation-item navigation-guarantee">
+            <a class="navigation-link" href="">Гарантия</a>
+          </li>
+          <li class="navigation-item navigation-contacts">
+            <a class="navigation-link" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
       </header>
 
       <main class="main-inner">
+        <div class="page-container">
         <header class="inner-header">
             <h1 class="inner-header-title">Моноподы для селфи</h1>
             <ol class="breadcrumbs">
@@ -121,6 +126,8 @@
                 <button class="button" type="submit">Показать</button>
             </form>
 
+        <div class="catalog-right-column">
+          <div class="sorting-container">
             <form class="sorting-type">
                 <h3 class="sorting-title">Сортировка:</h3>
                 <label class="visually-hidden" for="sorting">Сортировка</label>
@@ -138,6 +145,7 @@
           <a href="#" class="button">
             <span class="visually-hidden">Сортировка по убыванию</span>
           </a>
+        </div>
 
           <ul class="product-list">
             <li class="product-card">
@@ -196,10 +204,13 @@
               <a class=" pagination-next" href="#">Вперёд</a>
             </li>
           </ul>
-          </section>
+        </div>  
+        </section>
+        </div>
       </main>
 
       <footer class="page-footer">
+        <div class="page-footer-container">
         <section class="footer-contacts">
           <a href="https://htmlacademy.ru/">
             <img class="footer-logo" src="images\logo-footer.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
@@ -244,6 +255,7 @@
             <img class="htmlacademy" src="images\htmlacademy.svg" alt="htmlacademy" width="115" height="33">
           </a>
         </section>
+      </div>
       </footer>
   </body>
 </html>

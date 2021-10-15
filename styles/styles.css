@@ -30,16 +30,41 @@
     font-display: swap;
 }
 
+html{
+    height: 100%;
+}
+
 body{
     font-family: "Rubik", Arial, sans-serif;
     font-size: 18px;
     line-height: 30px;
     background-color: white;
-    color: #444444;;
+    color: #444444;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .page-header{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: block;
+    margin-top: 17px;
+    margin-left: 61px;
+}
+
+.navigation{
     background: #FFE17F;
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding-top: 49px;
+    padding-bottom: 167px;
 }
 
 .navigation-link{
@@ -51,11 +76,75 @@ body{
     list-style-type: none;
 }
 
+.log-in{
+    width: 220px;
+    margin-right: 35px;
+}
+
+.compare{
+    width: 100px;
+    margin-right: 55px;
+}
+
+.cart{
+    width: 100px;
+}
+
 .navigation-list{
     font-family: "Raleway", Arial, sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 21px;   
     text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0;
+    width: 1041px;
+    display: flex;
+}
+
+.navigation-user{
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+    padding: 0; 
+    width: 1075px;
+    display: flex;
+}
+
+.search{
+    width: 480px;
+    margin-left: 96px;
+    margin-right: 49px;
+}
+
+.navigation-catalog{
+    width: 236px;
+    margin-left: 60px;
+    margin-right: 304px;
+}
+
+.navigation-delivery{
+    width: 140px;
+    margin-right: 19px;
+}
+
+.navigation-guarantee{
+    width: 140px;
+    margin-right: 62px;
+}
+
+.navigation-contacts{
+    width: 140px;
+}
+
+.main-container{
+    flex-grow: 1;
+}
+
+.page-container{
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .catalog{
@@ -68,7 +157,15 @@ body{
 }
 
 .slider-item{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
+}
+
+.slider-picture{
+    margin-right: 40px;
 }
 
 .populars-title{
@@ -79,13 +176,27 @@ body{
     color: #000000;
 }
 
-.services{
-    background: #F0F0F0;
-    background-image: url("images/delivery-man.svg");
+.specifications-container{
+    display: flex;
 }
 
-.services-item{
-    list-style-type: none;
+.specifications{
+    display: flex;
+    flex-direction: column;
+}
+
+.measure{
+    font-size: 36px;
+    line-height: 30px;
+    width: 160px;
+}
+
+.feature{
+    font-size: 16px;
+    line-height: 30px;   
+    color: #444444;
+    width: 160px;
+    margin-left: 0;
 }
 
 .visually-hidden {
@@ -97,65 +208,65 @@ body{
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0)
-  }
+}
 
-  .measure{
-    font-size: 36px;
-    line-height: 30px;
-  }
+.categories-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
 
-  .feature{
-    font-size: 16px;
-    line-height: 30px;   
-    color: #444444;
-  }
-
-  .categories-item{
+.categories-item{
     list-style-type: none;
-  }
+    width: 160px;
+}
 
-  .categories-link{
+.categories-link{
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 18px;
     line-height: 24px;
     font-weight: 800; 
     color: #000000;
     text-decoration-line: none;
-  }
+}
+  
+.services{
+    background: #F0F0F0;
+    background-image: url("../images/delivery-man.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 136px 164px;
+    display: flex;
+    margin-top: 69px;
+    margin-bottom: 90px;
+}
 
-   .vr{
-    background-image: url("images/categories/vr.svg");
-  }
+.services-list{
+    width: 280px;
+}
 
-  .monopod{
-    background-image: url("images/categories/monopod.svg");
-  }
+.services-item{
+    list-style-type: none;
+    width: 160px;
+}
 
-  .camera{
-    background-image: url("images/categories/camera.svg");
-  }
-
-  .bracelet{
-    background-image: url("images/categories/bracelet.svg");
-  }
-
-  .watch{
-    background-image: url("images/categories/watch.svg");
-  }
-
-  .quadcopter{
-    background-image: url("images/categories/quadrocopter.svg");
-  }
-
-  .delivery-title{
+.services-title{
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 50px;
     line-height: 50px;
     font-weight: 800;  
     color: #000000;
-  }
+    width: 560px;
+}
 
-  .button{
+.services-description{
+    width: 497px;
+}
+
+.button{
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 18px;
     line-height: 21px;
@@ -164,9 +275,9 @@ body{
     text-transform: uppercase;
     color: #000000;
     text-decoration-line: none;
-  }
+}
 
-  .bonus{
+.bonus{
     background: #F0F0F0;
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 20px;
@@ -175,49 +286,90 @@ body{
     text-align: center;
     text-transform: uppercase;
     color: #000000;
-  }
+    width: 1160px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 43px;
+}
 
-  .about-title{
+.information-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-title{
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 50px;
     line-height: 50px;
     font-weight: 800;  
     color: #000000;
-  }
+    width: 560px;
+}
 
-  .delivery-company-item{
+.about-text{
+    width: 498px;
+}
+
+.delivery-company-item{
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
     color: #000000;
-  }
+}
 
-  .contacts-title{
+.more-details{
+    width: 260px;
+}
+
+.contacts-title{
     font-family: "Raleway", Arial, sans-serif;  
     font-size: 50px;
     line-height: 50px;
     font-weight: 800;  
     color: #000000;
-  }
+    width: 560px;
+}
 
-  .contacts-subtitle{
+.contacts-text{
+    width: 497px;
+}
+
+.contacts-subtitle{
     color: #444444;
     font-size: 24px;
     line-height: 30px;
     font-weight: bold;
-  }
+    width: 358px;
+}
 
-  .contacts-phone{
+.contacts-address-text{
+    width: 513px;
+}
+
+.contacts-phone{
     color: #444444;
     text-decoration: underline;
-  }
+}
 
-  .contacts-schedule-item{
+.contacts-schedule-item{
     list-style-type: none;
-  }
+}
 
-  .newsletters{
+.write-to-us{
+    width: 260px;
+}
+
+.newsletters{
     background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 131px;
+}
+
+.newsletters-text{
+    display: flex;
+    align-items: center;
 }
 
 .newsletters-title{
@@ -226,11 +378,74 @@ body{
     line-height: 50px;
     font-weight: 800;  
     color: #000000;
+    width: 560px;
+    margin-right: 40px;
+}
+
+.newsletters-description{
+    width: 560px;
+}
+
+.newsletter-email{
+    display: flex;
+}
+
+.field{
+    width: 601px;
+}
+
+.newsletter-button{
+    width: 260px;
+    margin-right: 171px;
+}
+
+.it-is-free{
+    width: 129px;
 }
 
 .page-footer{
     background-color: #444444;
     color: #FFFFFF;
+}
+
+.page-footer-container{
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
+    padding-top: 62px;
+    padding-bottom: 61px;
+}
+
+.adress{
+    font-size: 16px;
+    line-height: 19px;
+    width: 238px;
+    margin-top: 35px;
+}
+
+.footer-adress{
+    width: 238px;
+}
+
+.footer-nav{
+    width: 458px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 114px;
+    margin-right: 58px;
+}
+
+.footer-navigation-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-navigation-list:first-child{
+    margin-right: 7px;
+}
+
+.footer-navigation-list:nth-child(2){
+    margin-right: 7px;
 }
 
 .footer-navigation-link{
@@ -240,10 +455,27 @@ body{
 
 .footer-navigation-item{
     list-style-type: none;
+    width: 148px;
 }
 
 .footer-social-item{
     list-style-type: none;
+}
+
+.footer-phone{
+    width: 293px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.phone{
+    font-size: 16px;
+    line-height: 30px;   
+}
+
+.htmlacademy{
+    width: 115px;
 }
 
 .inner-header-title{
@@ -263,6 +495,18 @@ body{
     line-height: 19px;
     color:  #000000;
     text-decoration-line: none;
+}
+
+.catalog-products{
+    display: flex;
+}
+
+.catalog-right-column{
+    width: 972px;
+}
+
+.catalog-filter{
+    width: 468px;
 }
 
 .catalog-filter-title{
