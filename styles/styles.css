@@ -248,11 +248,14 @@ body{
   
 .services{
     background: #F0F0F0;
+}
+
+.services-container{
+    display: flex;
     background-image: url("../images/delivery-man.svg");
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 136px 164px;
-    display: flex;
     margin-top: 69px;
     margin-bottom: 90px;
 }
@@ -488,6 +491,11 @@ body{
 }
 
 .footer-navigation-link{
+    font-family: "Raleway", Arial, sans-serif;  
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 800;  
+    text-transform: uppercase;
     color: #FFFFFF;
     text-decoration-line: none;
 }
@@ -587,6 +595,7 @@ body{
     color: #000000;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin: 0;
 }
 
 .control{
@@ -606,6 +615,8 @@ body{
 .sorting-container{
     background: #EBEBEB;
     display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .sorting-type{
@@ -635,22 +646,26 @@ body{
 }
 
 .product-list{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 360px 360px;
+    gap: 40px 44px;
     width: 760px;
     padding: 0;
-    justify-content: space-between;
-    margin-top: 69px;
+    margin-bottom: 44px;
 }
 
 .product-card{
     list-style-type: none;
-    width: 360px;
     margin: 0;
+    display: grid;
+    grid-template-columns: 280px auto auto;
+    grid-template-rows: 380px 32px 50px;
 }
 
 .product-card-link{
     text-decoration-line: none;
+    grid-column: 1/-1;
+    grid-row: 1/2;
 }
 
 .product-card-title{
@@ -659,12 +674,15 @@ body{
     line-height: 24px;
     font-weight: bold;
     color: #000000;
+    grid-column: 1/2;
+    grid-row: 3/4;
 }
 
 .price{
     font-size: 18px;
     line-height: 21px;
-    text-align: right;
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
 
 .details{
@@ -683,6 +701,7 @@ body{
     height: 55px;
     background-color: white;
     border: 3px solid #EBEBEB;
+    margin-bottom: 51px;
 }
 
 .pagination-catalog{
@@ -691,6 +710,7 @@ body{
     align-items: center;
     width: 100%;
     padding: 0;
+    margin-bottom: 77px;
 }
 
 .pagination-prev{
