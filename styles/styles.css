@@ -110,11 +110,13 @@ body{
     padding: 0;
     display: flex;
     margin-right: 60px;
+    margin-top: 0;
 }
 
 .navigation-user{
     font-size: 16px;
     line-height: 19px;
+    margin-top: 0;
     margin-bottom: 29px;
     margin-left: 60px;
     margin-right: 60px;
@@ -313,6 +315,26 @@ body{
 .slider-picture{
     margin-right: 40px;
     width: 560px;
+    position: relative;
+}
+
+.slider-button{
+    position: absolute;
+    border: none;
+    width: 20px;
+    height: 60px;
+    background-color: inherit;
+    border-radius: 6px;
+    outline: none;
+    align-self: center;
+}
+
+.slider-prev{
+    transform: translate(-540px, 280px) translate(-50%, -50%);
+}
+
+.slider-next{
+    transform: translate(-20px, 280px) translate(-50%, -50%);
 }
 
 .slider-text{
@@ -552,11 +574,24 @@ body{
     z-index: 1;
 }
 
+.services-button-current{
+    background: #000000;
+    color: #ffe17f;
+    padding: 10px 120px 11px 3px;
+    width: 280px;
+}
+
 .services-button:hover{
+    color: #000000;
+    width: 160px;
     background: #FFC700;
 }
 
-.services-button::after{
+.services-button:hover::before {
+    background: transparent;
+  }
+
+.services-button:not(.services-button-current)::after{
     content: "";
     position: absolute;
     height: 8px;
@@ -564,66 +599,20 @@ body{
     top: 50%;
     z-index: -1;
     width: 100%;
-    background-color: #f0c52e;
-    transform: translateY(-50%);
-}
-
-.services-button:active{
-    width: 280px;
-    color: #FFE17F;
-    background-color: black;
-}
-
-.services-button:hover:focus::after{
-    content: "";
-    position: absolute;
-    height: 8px;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-    width: 100%;
-    background-color: #f0c52e;
-    transform: translateY(-50%);
-}
-
-.services-button:active::after{
-    content: "";
-    position: absolute;
-    height: 8px;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-    width: 100%;
-    background-color: black;
+    background-color: #FFC700;
     transform: translateY(-50%);
 }
 
 .services-button:focus{
     outline: none;
+    background: transparent;
+    width: 160px;
+    box-sizing: border-box;
+    color: #000000;
 }
 
 .services-button:focus::after{
-    content: "";
-    position: absolute;
-    height: 8px;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-    width: 100%;
     background-color: #AF4FFF;
-    transform: translateY(-50%);
-}
-
-.services-button:focus:active::after{
-    content: "";
-    position: absolute;
-    height: 8px;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-    width: 100%;
-    background-color: black;
-    transform: translateY(-50%);
 }
 
 .services-title{
@@ -1123,6 +1112,7 @@ body{
 .htmlacademy{
     display: block;
     width: 115px;
+    padding: 10px;
 }
 
 svg:hover #htmlacademy{
@@ -1136,7 +1126,6 @@ svg:hover #htmlacademy{
 
 .htmlacademy:focus{
     outline: 2px solid #AF4FFF;
-    box-sizing: border-box;
     border-radius: 10px;
 }
 
@@ -1345,6 +1334,14 @@ svg:hover #htmlacademy{
 
 .show:active{
     color:rgba(0, 0, 0, 0.3);
+}
+
+.show:focus{
+    outline: none;
+}
+
+.show:focus::after{
+    background-color: #AF4FFF;
 }
 
 .select-control{
