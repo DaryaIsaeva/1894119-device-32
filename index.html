@@ -52,8 +52,18 @@
         </ul>
 
         <ul class="navigation-list">
-          <li class="navigation-item">
+          <li class="navigation-item .navigation-item-catalog">
             <a class="navigation-catalog" href="catalog.html">Каталог товаров</a>
+            <div class="subcatalog">
+              <ul class="additional-list">
+                <li class="additional-item"><a class="subcatalog-link" href="#">Виртуальная реальность</a></li>
+                <li class="additional-item"><a class="subcatalog-link" href="#">Фитнес-браслеты</a></li>
+                <li class="additional-item"><a class="subcatalog-link" href="#">Квадрокоптеры</a></li>
+                <li class="additional-item"><a class="subcatalog-link" href="#">Моноподы для селфи</a></li>
+                <li class="additional-item"><a class="subcatalog-link" href="#">Умные часы</a></li>
+                <li class="additional-item"><a class="subcatalog-link" href="#">Экшн-камеры</a></li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item navigation-delivery">
             <a class="navigation-services" href="">Доставка</a>
@@ -70,72 +80,71 @@
    
     <main class="main-index main-container">
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
-      <section class="populars">
-        <div class="page-container">
-          <ul class="slider-list">
-            <li class="slider-item">
+      <section class="slider page-container">
+        <ul class="slider-list">
+          <li class="slider-item">
               
-              <div class="slider-picture">
-                <img class="slider-image" src="images/quadrocopter-slide-1.png" alt="Квадрокоптер" width="560" height="560">
+            <div class="slider-picture">
+              <img class="slider-image" src="images/quadrocopter-slide-1.png" alt="Квадрокоптер" width="560" height="560">
 
-                <button class="slider-button slider-prev" type="button">
-                  <span class="visually-hidden">Предыдущее фото</span>
-                  <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" fill="black"/>
-                  </svg>
-                </button>
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+                <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 60H16.5L0 30L16.5 0H20L3.8 30L20 60Z" fill="black"/>
+                </svg>
+              </button>
 
-                <button class="slider-button slider-next" type="button">
-                  <span class="visually-hidden">Следующее фото</span>
-                  <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 60H3.5L20 30L3.5 0H0L16.2 30L0 60Z" fill="black"/>
-                  </svg>                    
-                </button>
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+                <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 60H3.5L20 30L3.5 0H0L16.2 30L0 60Z" fill="black"/>
+                </svg>                    
+              </button>
+            </div>
+
+            <div class="slider-text">
+
+              <h2 class="slider-number"><span class="visually-hidden">Номер слайда</span> 01 </h2>
+              <h3 class="populars-title">Порхает как бабочка,  жалит как пчела!</h2>
+              <p class="populars-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+              </p>
+
+              <div class="slaider-link-container">
+                <a class="button slider-more-link" href="#">Подробнее</a>
+                <ol class="slider-pagination">
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button slider-pagination-button-current" type="radio">
+                      <span class="visually-hidden">1 фото</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button" type="radio">
+                      <span class="visually-hidden">2 фото</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button" type="radio">
+                      <span class="visually-hidden">3 фото</span>
+                    </button>
+                  </li>
+                </ol>
               </div>
 
-              <div class="slider-text">
-
-                <h2 class="populars-title">Порхает как бабочка,  жалит как пчела!</h2>
-                <p class="populars-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-                </p>
-
-                <div class="slaider-link-container">
-                  <a class="button slider-more-link" href="#">Подробнее</a>
-                  <ol class="slider-pagination">
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="radio">
-                        <span class="visually-hidden">1 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="radio">
-                        <span class="visually-hidden">2 фото</span>
-                      </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                      <button class="slider-pagination-button" type="radio">
-                        <span class="visually-hidden">3 фото</span>
-                      </button>
-                    </li>
-                  </ol>
-                </div>
-
-                <div class="specifications-container">
-                  <dl class="specifications">
-                    <dt class="measure">800 м</dt>
-                    <dd class="feature">Дальность полета</dd>
-                  </dl>
-                  <dl class="specifications">
-                    <dt class="measure">50 м</dt>
-                    <dd class="feature">Радиус поражения</dd>
-                  </dl>
-                </div>
-
+              <div class="specifications-container">
+                <dl class="specifications">
+                  <dt class="measure">800 м</dt>
+                  <dd class="feature">Дальность полета</dd>
+                </dl>
+                <dl class="specifications">
+                  <dt class="measure">50 м</dt>
+                  <dd class="feature">Радиус поражения</dd>
+                </dl>
               </div>
 
-            </li>  
-          </ul>
-        </div>
+            </div>
+
+          </li>  
+        </ul>
       </section>
 
       <section class="categories">
@@ -207,7 +216,7 @@
               <button class="services-button" type="button">Кредит</button>
             </li>
           </ul>
-          <div>
+          <div class="services-wrapper">
             <h2 class="services-title">Доставка</h2>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! 
             Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
