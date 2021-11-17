@@ -42,12 +42,34 @@
             </a>
           </li>
           <li class="navigation-item cart-item">
+            <button class="number-of-product-names">2</button>
             <a class="navigation-link cart" href="#">
               <svg class="cart-svg" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3 5L11.8 5.2L8.6 0.3C8.5 0.1 8.2 0 8 0C7.8 0 7.5 0.1 7.4 0.3L4.2 5.2H0.7C0.3 5.2 0 5.5 0 5.9C0 6 0 6 0 6.1L1.9 12.9C2.1 13.6 2.6 14 3.3 14H12.7C13.4 14 13.9 13.6 14.1 12.9L16 6C16 5.9 16 5.9 16 5.8C16 5.4 15.7 5 15.3 5ZM8 1.9L10.2 5.1H5.9L8 1.9Z" fill="black"/>
               </svg>
               <p>Корзина</p>
             </a>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/products/amateur-monopod.jpg" alt="" width="41" height="43">
+                    <p class="cart-item-title">Любительская <br> селфи-палка</p>
+                    <button class="delete"></button>
+                  </li>
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/products/professional-monopod.jpg" alt="" width="41" height="43">
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    <button class="delete"></button>
+                  </li>
+                </ul>
+                <div class="result">
+                  <div class="number-goods">Товаров: 2</div>
+                  <div class="sum">Сумма: 2000 ₽</div>
+                </div>
+              </div>
+              <a class="open-cart" href="#">Открыть корзину</a>
+            </div>
           </li>
         </ul>
 
@@ -385,5 +407,56 @@
 
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+
+          <form class="modal-delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group-wrapper">
+              <div class="field-group">
+                <label class="delivery-form-label" for="full-name">Ваше имя:</label>
+                <input class="full-name-input delivery-form-field" type="text" id="full-name" name="full-name" placeholder="Имя Фамилия">
+                <svg class="delivery-form-icon" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 12H13C12.8 9.4 10.9 7.2 8.3 6.5C9.3 5.9 10 4.8 10 3.5C10 1.6 8.4 0 6.5 0C4.6 0 3 1.6 3 3.5C3 4.8 3.7 5.9 4.7 6.5C2.1 7.2 0.2 9.4 0 12Z" fill="#B3B3B3"/>
+                </svg> 
+                <span class="full-name-caption">Пожалуйста, представьтесь</span>
+              </div>
+
+              <div class="field-group">
+                <label class="delivery-form-label" for="email-modal">Ваш e-mail:</label>
+                <input class="email-input delivery-form-field" type="text" id="email-modal" name="email-modal" value="krasotka92@mail.ru">
+                <svg class="delivery-form-icon" width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.6 8C7.2 8 7 7.9 6.6 7.7L0 4V11C0 11.6 0.4 12 0.9 12H14.1C14.7 12 15 11.6 15 11V4L8.5 7.7C8.1 7.9 7.9 8 7.6 8ZM14.1 0H0.9C0.4 0 0 0.5 0 1V1.8L7.5 6L15 1.8V1C15 0.5 14.6 0 14.1 0Z" fill="#B3B3B3"/>
+                </svg>  
+                <span class="email-caption">Забавный у вас адрес</span>
+              </div>
+            </div>
+
+            <div class="field-group-wrapper">
+              <div class="field-group">
+                <label class="delivery-form-label" for="purchase">Что нужно привезти:</label>
+                <input class="purchase-input delivery-form-field " type="text" id="purchase" name="purchase" placeholder="В свободной форме">
+              </div>
+
+              <div class="field-group counter-form">
+                <span class="delivery-form-label">Количество:</span>
+                <div class="counter">
+                  <button class="minus"></button>
+                  <p class="amount">1</p>
+                  <button class="plus"></button>
+                </div>
+              </div>
+            </div>
+
+            <button class="show" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
