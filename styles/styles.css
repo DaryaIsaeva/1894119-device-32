@@ -52,7 +52,6 @@ body{
     width: 1040px;
     margin: 0 auto;
     background: #FFE17F;
-    /* min-height: 300px; */
     padding: 0 60px;
     margin-top: 40px;
 }
@@ -1623,7 +1622,6 @@ body{
 .footer-social-list{
     display: flex;
     flex-wrap: wrap; 
-    /* width: 150px; */
     padding: 0;
     margin: auto;
 }
