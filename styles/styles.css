@@ -2324,9 +2324,6 @@ body{
 }
 
 .price{
-    max-width: 70px;
-    font-size: 18px;
-    line-height: 21px;
     grid-column: 2/3;
     grid-row: 2/3;
     font-family: "Rubik", Arial, sans-serif;
