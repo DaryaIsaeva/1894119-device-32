@@ -1,0 +1,35 @@
+{
+  "name": "1894119-device-32",
+  "version": "1.0.0",
+  "description": "Личный проект «Девайс» от HTML Academy",
+  "main": ".stylelintrc.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaryaIsaeva/1894119-device-32.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaryaIsaeva/1894119-device-32/issues"
+  },
+  "homepage": "https://github.com/DaryaIsaeva/1894119-device-32#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2"
+  },
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ]
+}
