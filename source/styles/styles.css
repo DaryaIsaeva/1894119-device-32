@@ -641,19 +641,18 @@ body{
     padding: 0;
     margin: 0;
     margin-bottom: 70px;
-    display: flex;
     list-style-type: none;
     display: none;
+    position: relative;
 }
 
-.slider-item-current{
+.slider-item--current{
     display: flex;
 }
 
-.slider-picture{
-    margin-right: 40px;
-    width: 560px;
-    position: relative;
+
+.slider-image {
+  margin-right: 40px;
 }
 
 .slider-button{
@@ -667,6 +666,7 @@ body{
     align-self: center;
     cursor: pointer;
     padding: 0;
+    transform: translate(-50%, -50%);
 }
 
 .slider-button:hover{
@@ -686,11 +686,13 @@ body{
 }
 
 .slider-prev{
-    transform: translate(-530px, 275px) translate(-50%, -50%);
+    top: 275px;
+    left: 30px;
 }
 
 .slider-next{
-    transform: translate(-30px, 275px) translate(-50%, -50%);
+    top: 278px;
+    left: 560px;
 }
 
 .slider-text{
@@ -729,11 +731,6 @@ body{
     margin-bottom: 35px;
 }
 
-.slider-link-container{
-    margin-bottom: 55px;
-    display: flex;
-}
-
 .slider-more-link{
     display: block;
     box-sizing: border-box;
@@ -741,23 +738,17 @@ body{
     padding-top: 14px;
     padding-bottom: 16px;
     margin-right: 200px;
+    margin-bottom: 55px;
 }
 
 .slider-pagination{
     list-style-type: none;
-    top: 0;
     padding: 0;
     align-self: center;
-}
-
-.slider-pagination-item{
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-
-.slider-pagination-item:not(:last-of-type){
-    margin-right: 17px;
+    position: absolute;
+    right: 60px;
+    top: 355px;
+    display: flex;
 }
 
 .slider-pagination-button{
@@ -771,23 +762,27 @@ body{
     cursor: pointer;
 }
 
-.slider-pagination-button:not(.slider-pagination-button-current):hover{
+.slider-pagination-button:not(:last-of-type){
+  margin-right: 17px;
+}
+
+.slider-pagination-button:not(.slider-pagination-button--current):hover{
     border: 2px solid rgba(0, 0, 0, 0.6);
 }
 
-.slider-pagination-button:not(.slider-pagination-button-current):active{
+.slider-pagination-button:not(.slider-pagination-button--current):active{
     border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.slider-pagination-button:not(.slider-pagination-button-current):focus{
+.slider-pagination-button:not(.slider-pagination-button--current):focus{
     border: 2px solid #AF4FFF;
 }
 
-.slider-pagination-button:not(.slider-pagination-button-current):active:focus{
+.slider-pagination-button:not(.slider-pagination-button--current):active:focus{
     border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.slider-pagination-button-current{
+.slider-pagination-button--current{
     background-color: #000;
 }
 
@@ -1105,7 +1100,7 @@ body{
     position: absolute;
     height: 8px;
     left: 0;
-    top: 50%;
+    top: 45%;
     z-index: -1;
     width: 100%;
     background-color: #FFE17F;
