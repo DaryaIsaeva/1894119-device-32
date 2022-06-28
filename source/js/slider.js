@@ -13,20 +13,20 @@ const paginationButtons = slider.querySelectorAll('.slider-pagination-button');
 let i = 0;
 
 const switchNextSlide = () => {
-  ++i
+  ++i;
   if (i === slides.length) {
-      slides[i-1].classList.remove('slider-item--current');
-      paginationButtons[i-1].classList.remove('slider-pagination-button--current');
-      i = 0;
-      slides[i].classList.add('slider-item--current');
-      paginationButtons[i].classList.add('slider-pagination-button--current');
+    slides[i-1].classList.remove('slider-item--current');
+    paginationButtons[i-1].classList.remove('slider-pagination-button--current');
+    i = 0;
+    slides[i].classList.add('slider-item--current');
+    paginationButtons[i].classList.add('slider-pagination-button--current');
   } else {
-      slides[i-1].classList.remove('slider-item--current');
-      paginationButtons[i-1].classList.remove('slider-pagination-button--current');
-      slides[i].classList.add('slider-item--current');
-      paginationButtons[i].classList.add('slider-pagination-button--current');
+    slides[i-1].classList.remove('slider-item--current');
+    paginationButtons[i-1].classList.remove('slider-pagination-button--current');
+    slides[i].classList.add('slider-item--current');
+    paginationButtons[i].classList.add('slider-pagination-button--current');
   }
-}
+};
 
 const switchPrevSlide = () => {
   if (i === 0) {
@@ -42,24 +42,25 @@ const switchPrevSlide = () => {
     paginationButtons[i-1].classList.add('slider-pagination-button--current');
     i--;
   }
-}
+};
 
 buttonSliderNext.addEventListener('click', switchNextSlide);
 
 buttonSliderPrev.addEventListener('click', switchPrevSlide);
 
-sliderPagination.addEventListener('click', (evt) => {
-  for(let i = 0; i < sliderPagination.children.length; i++) {
-    sliderPagination.children[i].classList.remove('slider-pagination-button--current');
-  }
-  evt.target.classList.add('slider-pagination-button--current');
-})
-
 paginationButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (evt) => {
     for (let slide of slides) {
       slide.classList.remove('slider-item--current');
-    }
+    };
     slides[index].classList.add('slider-item--current');
-  })
-})
+
+    for (let button of paginationButtons) {
+      button.classList.remove('slider-pagination-button--current');
+    };
+    evt.target.classList.add('slider-pagination-button--current');
+    if (index === paginationButtons.length - 1) {
+      i = slides.length - 1;
+    };
+  });
+});

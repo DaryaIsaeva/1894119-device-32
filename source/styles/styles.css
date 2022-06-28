@@ -982,7 +982,7 @@ body{
     z-index: 1;
 }
 
-.services-button-current{
+.services-button--current{
     background: #000000;
     color: #ffe17f;
     padding-top: 9px;
@@ -991,7 +991,7 @@ body{
     width: 280px;
 }
 
-.services-button:hover:not(.services-button-current){
+.services-button:hover:not(.services-button--current){
     color: #000000;
     width: 160px;
     background: #FFC700;
@@ -1001,7 +1001,7 @@ body{
     background: transparent;
 }
 
-.services-button:not(.services-button-current)::after{
+.services-button:not(.services-button--current)::after{
     content: "";
     position: absolute;
     height: 8px;
@@ -1013,7 +1013,7 @@ body{
     transform: translateY(-50%);
 }
 
-.services-button:not(.services-button-current):focus{
+.services-button:not(.services-button--current):focus{
     outline: none;
     background: transparent;
     width: 160px;
@@ -1021,11 +1021,11 @@ body{
     color: #000000;
 }
 
-.services-button:focus:not(.services-button-current)::after{
+.services-button:focus:not(.services-button--current)::after{
     background-color: #AF4FFF;
 }
 
-.services-button:not(.services-button-current):active{
+.services-button:not(.services-button--current):active{
     background-color: #FFC700;
     opacity: 0.6;
 }
