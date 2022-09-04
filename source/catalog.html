@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Страница каталога интернет-магазина «Девайс». Моноподы для селфи</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nouislider.css">
   </head>
   <body>
     <header class="page-header main-catalog-header">
@@ -155,23 +156,14 @@
                 <legend class="catalog-filter-title">Стоимость</legend>
 
                 <div class="range">
-                  <div class="range-scale">
-                    <div class="range-bar" style="left: 0px; width: 119px">
-                      <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
-                    </div>
-                  </div>
+                  <div id="slider"></div>
 
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
-                      от <input class="catalog-filter-input" type="number" value="0" name="min-price">
+                      от <input class="catalog-filter-input" type="number" value="0" name="min-price" id="min-price">
                     </label>
                     <label class="catalog-filter-label">
-                      до <input class="catalog-filter-input" type="number" value="5000" name="max-price">
+                      до <input class="catalog-filter-input" type="number" value="5000" name="max-price" id="max-price">
                     </label>
                   </div>
                 </div>
@@ -428,7 +420,8 @@
       </div>
     </footer>
 
+    <script src="js/nouislider.min.js"></script>
     <script src="js/navigation.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/range-slider.js"></script>
   </body>
 </html>
